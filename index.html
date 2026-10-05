@@ -4,12 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NexoMarket - Catálogo de Proveedores</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #0d1117; color: #f0f6fc; min-height: 100vh; padding-bottom: 3rem; }
+    
+    /* Header Original */
+    .header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
+    .logo span { color: #58a6ff; }
+    .menu { background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; display: none; }
+    .nav-links a { color: #8b949e; text-decoration: none; margin-left: 1.5rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #58a6ff; }
+
+    /* Hero Section */
+    .hero { text-align: center; padding: 4rem 1rem 3rem; max-width: 800px; margin: 0 auto; }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+    .hero h1 span { color: #58a6ff; }
+    .hero p { color: #8b949e; font-size: 1.1rem; }
+
+    /* Container & Grid */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .section-title { font-size: 1.5rem; margin-bottom: 2rem; color: #f0f6fc; }
+    .providers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+
+    /* Tarjetas de Proveedores */
+    .provider { background: #161b22; border: 1px solid #30363d; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+    .provider:hover { transform: translateY(-4px); border-color: #58a6ff; }
+    .provider-image { width: 100%; height: 180px; overflow: hidden; background: #21262d; }
+    .provider-image img { width: 100%; height: 100%; object-fit: cover; }
+    .provider-info { padding: 1.25rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .provider-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #f0f6fc; }
+    .provider-info p { color: #8b949e; font-size: 0.875rem; margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.4; }
+    .provider-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .provider-price { font-weight: 700; color: #58a6ff; font-size: 1.1rem; }
+    .arrow { color: #58a6ff; font-size: 1.2rem; font-weight: bold; }
+
+    /* Modal */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; justify-content: center; align-items: center; z-index: 1000; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #161b22; border: 1px solid #30363d; padding: 2rem; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; position: relative; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #8b949e; font-size: 1.5rem; cursor: pointer; }
+    .modal h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
+    .modal p { color: #8b949e; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .modal-price { font-size: 1.5rem; font-weight: 800; color: #58a6ff; margin-bottom: 1.5rem; }
+    .modal-btn { background: #238636; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; width: 100%; cursor: pointer; font-size: 1rem; }
+    .modal-btn:hover { background: #2ea043; }
+
+    @media (max-width: 768px) {
+      .menu { display: block; }
+      .nav-links { display: none; width: 100%; position: absolute; top: 100%; left: 0; background: #161b22; padding: 1rem; border-bottom: 1px solid #30363d; }
+      .nav-links.open { display: flex; flex-direction: column; gap: 1rem; }
+      .nav-links a { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Cabecera y Navegación Original -->
   <header class="header">
     <div class="nav-container">
       <a href="#" class="logo">Nexo<span>Market</span></a>
@@ -22,7 +74,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Encuentra los mejores <span>proveedores</span> para tu negocio</h1>
@@ -30,7 +81,6 @@
     </div>
   </section>
 
-  <!-- Catálogo Principal -->
   <main class="container" id="catalogo">
     <h2 class="section-title">Nuestros Proveedores</h2>
     <div class="providers-grid" id="providerGrid">
@@ -218,7 +268,6 @@
     </div>
   </main>
 
-  <!-- Ventana Modal de Compra Original -->
   <div class="modal-overlay" id="buyModal">
     <div class="modal">
       <button class="modal-close" id="closeModal">&times;</button>
@@ -229,7 +278,6 @@
     </div>
   </div>
 
-  <!-- Cambio de versión para romper la caché del archivo JS -->
-  <script src="script.js?v=99999"></script>
+  <script src="script.js?v=77777"></script>
 </body>
 </html>
