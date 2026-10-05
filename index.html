@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexoMarket — proveedores, fabricantes y oportunidades.">
+  <title>NexoMarket | Proveedores. Fabricantes. Oportunidades.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#inicio" aria-label="NexoMarket inicio">
+      <span class="brand-mark">N</span><span>NexoMarket</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#proveedores">Proveedores</a>
+      <a href="#pack">Pack completo</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#mis-compras">Mis compras</a>
+    </nav>
+    <button class="menu" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">NEXOMARKET</p>
+        <h1>Los proveedores que necesitas.<br><span>Las oportunidades que buscabas.</span></h1>
+        <p class="hero-copy">Accede a información, catálogos y contactos de proveedores desde un solo lugar.</p>
+        <a class="btn btn-light" href="#pack">Ver proveedores <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="pack-section" id="pack">
+      <div class="section-label">⭐ OFERTA DESTACADA</div>
+      <article class="pack-card">
+        <div class="pack-art">
+          <div class="pack-orb">N</div>
+          <div class="floating-chip chip-one">PROVEEDORES</div>
+          <div class="floating-chip chip-two">CATÁLOGOS</div>
+        </div>
+        <div class="pack-info">
+          <span class="badge">PACK COMPLETO</span>
+          <h2>Todos los proveedores<br>en un solo pack.</h2>
+          <p>Accede a todos los proveedores disponibles en NexoMarket por un precio reducido.</p>
+          <ul>
+            <li>✓ Todos los proveedores disponibles</li>
+            <li>✓ Documentación completa</li>
+            <li>✓ Acceso desde tu cuenta</li>
+            <li>✓ Descarga de documentos</li>
+          </ul>
+          <div class="price-row"><span class="old-price">119,88 €</span><strong>25,99 €</strong></div>
+          <button class="btn btn-light buy-btn" data-product="Pack Completo" data-price="25,99">Conseguir pack <span>→</span></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="providers-section" id="proveedores">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">CATÁLOGO</div>
+          <h2>Nuestros proveedores</h2>
+        </div>
+        <p>Elige la categoría que más te interese.</p>
+      </div>
+      <div class="provider-grid" id="providerGrid"></div>
+    </section>
+
+    <section class="how" id="como-funciona">
+      <div class="section-label">CÓMO FUNCIONA</div>
+      <h2>De la búsqueda al acceso<br>en pocos pasos.</h2>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Elige</h3><p>Selecciona un proveedor o el pack completo.</p></div>
+        <div class="step"><span>02</span><h3>Compra</h3><p>Paga con tarjeta o PayPal de forma segura.</p></div>
+        <div class="step"><span>03</span><h3>Recibe</h3><p>Recibirás el documento y acceso a tus compras.</p></div>
+      </div>
+    </section>
+
+    <section class="account-preview" id="mis-compras">
+      <div>
+        <div class="section-label">TU CUENTA</div>
+        <h2>Tus compras,<br>siempre a mano.</h2>
+        <p>Cuando tengamos conectado el sistema de pagos, aquí podrás acceder a tus documentos comprados, verlos y descargarlos.</p>
+      </div>
+      <div class="purchase-card">
+        <div class="purchase-head"><strong>Mis compras</strong><span>3 compras</span></div>
+        <div class="purchase-item"><span class="mini-art watch">⌚</span><div><strong>Proveedor de Relojes</strong><small>Completado</small></div><button>Descargar</button></div>
+        <div class="purchase-item"><span class="mini-art clothes">👕</span><div><strong>Proveedor de Ropa</strong><small>Completado</small></div><button>Descargar</button></div>
+        <div class="purchase-item"><span class="mini-art box">📦</span><div><strong>Pack Completo</strong><small>Completado</small></div><button>Descargar</button></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="section-label">NEXOMARKET</div>
+      <h2>Encuentra tu próximo proveedor.</h2>
+      <a class="btn btn-light" href="#proveedores">Explorar catálogo <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">N</span><strong>NexoMarket</strong><p>Proveedores. Fabricantes. Oportunidades.</p></div>
+    <div class="footer-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Términos</a></div>
+    <p class="copyright">© 2026 NexoMarket. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="modal" id="buyModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Cerrar">×</button>
+      <div class="section-label">COMPRA</div>
+      <h2 id="modalTitle">Producto</h2>
+      <p>En esta primera versión el checkout es una demostración. Después conectaremos el pago real y el envío automático del documento.</p>
+      <label>Correo electrónico</label>
+      <input type="email" id="email" placeholder="tu@email.com">
+      <div class="modal-price"><span>Total</span><strong id="modalPrice">9,99 €</strong></div>
+      <button class="btn btn-light full" id="demoPay">Continuar al pago</button>
+      <small>Pago seguro · Tarjeta · PayPal</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
