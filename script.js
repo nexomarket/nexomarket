@@ -1,16 +1,17 @@
 const providers = [
-  ["Relojes","⌚","Catálogos, precios e información del proveedor."],
-  ["Accesorios de coche","🚗","Accesorios y productos para automoción."],
-  ["Motos eléctricas","🏍️","Información de proveedores y modelos."],
-  ["Productos chinos","📦","Selección de productos y proveedores."],
-  ["Soportes móvil de moto","📱","Soportes y accesorios para moto."],
-  ["Fábricas chinas","🏭","Información para localizar fabricantes."],
-  ["Polos","👕","Catálogos de polos y proveedores."],
-  ["Zapatos","👟","Calzado y proveedores especializados."],
-  ["Electrónica","🔌","Productos y proveedores de electrónica."],
-  ["Juguetes","🧸","Catálogos y proveedores de juguetes."],
-  ["Mandos PS","🎮","Proveedores de accesorios gaming."],
-  ["Tarjetas NFC","📲","Tarjetas NFC y productos relacionados."]
+  ["Relojes",'<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Catálogos, precios e información del proveedor."],
+  ["Accesorios de coche",'<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Accesorios y productos para automoción."],
+  ["Motos eléctricas",'<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Información de proveedores y modelos."],
+  ["Productos chinos",'<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Selección de productos y proveedores."],
+  ["Soportes móvil de moto",'<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Soportes y accesorios para moto."],
+  ["Fábricas chinas",'<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Información para localizar fabricantes."],
+  ["Polos",'<img src="https://images.unsplash.com/photo-1625910513413-1fc256a59122?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Catálogos de polos y proveedores."],
+  ["Zapatos",'<img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Calzado y proveedores especializados."],
+  ["Electrónica",'<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Productos y proveedores de electrónica."],
+  ["Juguetes",'<img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Catálogos y proveedores de juguetes."],
+  ["Mandos PS",'<img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Proveedores de accesorios gaming."],
+  ["Tarjetas NFC",'<img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">',"Tarjetas NFC y productos relacionados."]
+];
 ];
 
 const grid = document.getElementById("providerGrid");
