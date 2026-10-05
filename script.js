@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Menú móvil
   const menuBtn = document.querySelector(".menu");
   const navLinks = document.querySelector(".nav-links");
   if (menuBtn && navLinks) {
     menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
   }
 
-  // Modal de compra
   const buyModal = document.getElementById("buyModal");
   const closeModal = document.getElementById("closeModal");
   const modalTitle = document.getElementById("modalTitle");
