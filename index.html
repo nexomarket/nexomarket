@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Navegación Header Original -->
+  <!-- Cabecera y Navegación Original -->
   <header class="header">
     <div class="nav-container">
       <a href="#" class="logo">Nexo<span>Market</span></a>
@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <!-- Hero Section Original -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Encuentra los mejores <span>proveedores</span> para tu negocio</h1>
@@ -30,7 +30,7 @@
     </div>
   </section>
 
-  <!-- Catálogo de Proveedores -->
+  <!-- Catálogo Principal -->
   <main class="container" id="catalogo">
     <h2 class="section-title">Nuestros Proveedores</h2>
     <div class="providers-grid" id="providerGrid">
@@ -178,3 +178,58 @@
         <div class="provider-info">
           <h3>Proveedor de Juguetes</h3>
           <p>Catálogos y proveedores de juguetes.</p>
+          <div class="provider-bottom">
+            <span class="provider-price">9,99 €</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11. Mandos PS -->
+      <article class="provider buy-btn" data-product="Proveedor de Mandos PS" data-price="9,99">
+        <div class="provider-image">
+          <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Mandos PS">
+        </div>
+        <div class="provider-info">
+          <h3>Proveedor de Mandos PS</h3>
+          <p>Proveedores de accesorios gaming.</p>
+          <div class="provider-bottom">
+            <span class="provider-price">9,99 €</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12. Tarjetas NFC -->
+      <article class="provider buy-btn" data-product="Proveedor de Tarjetas NFC" data-price="9,99">
+        <div class="provider-image">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Tarjetas NFC">
+        </div>
+        <div class="provider-info">
+          <h3>Proveedor de Tarjetas NFC</h3>
+          <p>Tarjetas NFC y productos relacionados.</p>
+          <div class="provider-bottom">
+            <span class="provider-price">9,99 €</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Ventana Modal de Compra Original -->
+  <div class="modal-overlay" id="buyModal">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h3 id="modalTitle">Producto</h3>
+      <p>Estás a punto de adquirir la información de este proveedor.</p>
+      <div class="modal-price" id="modalPrice">9,99 €</div>
+      <button class="modal-btn">Proceder al pago</button>
+    </div>
+  </div>
+
+  <!-- Cambio de versión para romper la caché del archivo JS -->
+  <script src="script.js?v=99999"></script>
+</body>
+</html>
