@@ -6,9 +6,9 @@ const providers = [
   ["Soportes móvil de moto", "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80", "Soportes y accesorios para moto."],
   ["Fábricas chinas", "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", "Información para localizar fabricantes."],
   ["Polos", "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=800&q=80", "Catálogos de polos y proveedores."],
-  ["Zapatos", "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80", "Calzado y proveedores especializados."],
+  ["Zapatos", "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80", "Calzado y proveedores especializados."],
   ["Electrónica", "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80", "Productos y proveedores de electrónica."],
-  ["Juguetes", "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=80", "Catálogos y proveedores de juguetes."],
+  ["Juguetes", "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=800&q=80", "Catálogos y proveedores de juguetes."],
   ["Mandos PS", "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80", "Proveedores de accesorios gaming."],
   ["Tarjetas NFC", "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80", "Tarjetas NFC y productos relacionados."]
 ];
