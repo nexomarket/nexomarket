@@ -1,10 +1,10 @@
 const providers = [
   ["Relojes", "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80", "Catálogos, precios e información del proveedor."],
   ["Accesorios de coche", "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80", "Accesorios y productos para automoción."],
-  ["Motos eléctricas", "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80", "Información de proveedores y modelos."],
-  ["Productos chinos", "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80", "Selección de productos y proveedores."],
+  ["Motos eléctricas", "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80", "Información de proveedores y modelos."],
+  ["Productos chinos", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80", "Selección de productos y proveedores."],
   ["Soportes móvil de moto", "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80", "Soportes y accesorios para moto."],
-  ["Fábricas chinas", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80", "Información para localizar fabricantes."],
+  ["Fábricas chinas", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80", "Información para localizar fabricantes."],
   ["Polos", "https://images.unsplash.com/photo-1625910513413-1fc256a59122?auto=format&fit=crop&w=800&q=80", "Catálogos de polos y proveedores."],
   ["Zapatos", "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80", "Calzado y proveedores especializados."],
   ["Electrónica", "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80", "Productos y proveedores de electrónica."],
