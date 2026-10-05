@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Datos de los proveedores con las imágenes correctas de Unsplash
+  // 1. Catálogo exacto de proveedores con las 12 imágenes corregidas de Unsplash
   const providers = [
     {
       title: "Proveedor de Relojes",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // 2. Renderizar proveedores en el HTML
+  // 2. Renderizado de las tarjetas manteniendo tu estructura y diseño exactos
   const providerGrid = document.getElementById("providerGrid");
   if (providerGrid) {
     providerGrid.innerHTML = providers.map(p => `
