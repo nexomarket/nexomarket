@@ -29,3 +29,18 @@ footer{padding:50px 7vw 35px;border-top:1px solid var(--line);display:grid;grid-
   object-fit: cover !important;
   border-radius: 8px !important;
 }
+/* Ajuste de imágenes para tarjetas de proveedores */
+.provider-image {
+  font-size: initial !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.provider-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
