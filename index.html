@@ -3,281 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexoMarket - Catálogo de Proveedores</title>
+  <meta name="description" content="NexoMarket — proveedores, fabricantes y oportunidades.">
+  <title>NexoMarket | Proveedores. Fabricantes. Oportunidades.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background-color: #0d1117; color: #f0f6fc; min-height: 100vh; padding-bottom: 3rem; }
-    
-    /* Header Original */
-    .header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
-    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
-    .logo span { color: #58a6ff; }
-    .menu { background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; display: none; }
-    .nav-links a { color: #8b949e; text-decoration: none; margin-left: 1.5rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: #58a6ff; }
-
-    /* Hero Section */
-    .hero { text-align: center; padding: 4rem 1rem 3rem; max-width: 800px; margin: 0 auto; }
-    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-    .hero h1 span { color: #58a6ff; }
-    .hero p { color: #8b949e; font-size: 1.1rem; }
-
-    /* Container & Grid */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    .section-title { font-size: 1.5rem; margin-bottom: 2rem; color: #f0f6fc; }
-    .providers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
-
-    /* Tarjetas de Proveedores */
-    .provider { background: #161b22; border: 1px solid #30363d; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
-    .provider:hover { transform: translateY(-4px); border-color: #58a6ff; }
-    .provider-image { width: 100%; height: 180px; overflow: hidden; background: #21262d; }
-    .provider-image img { width: 100%; height: 100%; object-fit: cover; }
-    .provider-info { padding: 1.25rem; display: flex; flex-direction: column; flex-grow: 1; }
-    .provider-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #f0f6fc; }
-    .provider-info p { color: #8b949e; font-size: 0.875rem; margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.4; }
-    .provider-bottom { display: flex; justify-content: space-between; align-items: center; }
-    .provider-price { font-weight: 700; color: #58a6ff; font-size: 1.1rem; }
-    .arrow { color: #58a6ff; font-size: 1.2rem; font-weight: bold; }
-
-    /* Modal */
-    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; justify-content: center; align-items: center; z-index: 1000; }
-    .modal-overlay.open { display: flex; }
-    .modal { background: #161b22; border: 1px solid #30363d; padding: 2rem; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; position: relative; }
-    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #8b949e; font-size: 1.5rem; cursor: pointer; }
-    .modal h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
-    .modal p { color: #8b949e; margin-bottom: 1.5rem; font-size: 0.9rem; }
-    .modal-price { font-size: 1.5rem; font-weight: 800; color: #58a6ff; margin-bottom: 1.5rem; }
-    .modal-btn { background: #238636; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; width: 100%; cursor: pointer; font-size: 1rem; }
-    .modal-btn:hover { background: #2ea043; }
-
-    @media (max-width: 768px) {
-      .menu { display: block; }
-      .nav-links { display: none; width: 100%; position: absolute; top: 100%; left: 0; background: #161b22; padding: 1rem; border-bottom: 1px solid #30363d; }
-      .nav-links.open { display: flex; flex-direction: column; gap: 1rem; }
-      .nav-links a { margin-left: 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header class="header">
-    <div class="nav-container">
-      <a href="#" class="logo">Nexo<span>Market</span></a>
-      <button class="menu" aria-label="Abrir menú">☰</button>
-      <nav class="nav-links">
-        <a href="#catalogo">Catálogo</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+  <header class="nav">
+    <a class="brand" href="#inicio" aria-label="NexoMarket inicio">
+      <span class="brand-mark">N</span><span>NexoMarket</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#proveedores">Proveedores</a>
+      <a href="#pack">Pack completo</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#mis-compras">Mis compras</a>
+    </nav>
+    <button class="menu" aria-label="Abrir menú">☰</button>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Encuentra los mejores <span>proveedores</span> para tu negocio</h1>
-      <p>Accede a catálogos exclusivos, contactos directos y precios mayoristas verificados.</p>
-    </div>
-  </section>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">NEXOMARKET</p>
+        <h1>Los proveedores que necesitas.<br><span>Las oportunidades que buscabas.</span></h1>
+        <p class="hero-copy">Accede a información, catálogos y contactos de proveedores desde un solo lugar.</p>
+        <a class="btn btn-light" href="#pack">Ver proveedores <span>↓</span></a>
+      </div>
+    </section>
 
-  <main class="container" id="catalogo">
-    <h2 class="section-title">Nuestros Proveedores</h2>
-    <div class="providers-grid" id="providerGrid">
-      
-      <!-- 1. Relojes -->
-      <article class="provider buy-btn" data-product="Proveedor de Relojes" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Relojes">
+    <section class="pack-section" id="pack">
+      <div class="section-label">⭐ OFERTA DESTACADA</div>
+      <article class="pack-card">
+        <div class="pack-art">
+          <div class="pack-orb">N</div>
+          <div class="floating-chip chip-one">PROVEEDORES</div>
+          <div class="floating-chip chip-two">CATÁLOGOS</div>
         </div>
-        <div class="provider-info">
-          <h3>Proveedor de Relojes</h3>
-          <p>Catálogos, precios e información del proveedor.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
+        <div class="pack-info">
+          <span class="badge">PACK COMPLETO</span>
+          <h2>Todos los proveedores<br>en un solo pack.</h2>
+          <p>Accede a todos los proveedores disponibles en NexoMarket por un precio reducido.</p>
+          <ul>
+            <li>✓ Todos los proveedores disponibles</li>
+            <li>✓ Documentación completa</li>
+            <li>✓ Acceso desde tu cuenta</li>
+            <li>✓ Descarga de documentos</li>
+          </ul>
+          <div class="price-row"><span class="old-price">119,88 €</span><strong>25,99 €</strong></div>
+          <button class="btn btn-light buy-btn" data-product="Pack Completo" data-price="25,99">Conseguir pack <span>→</span></button>
         </div>
       </article>
+    </section>
 
-      <!-- 2. Accesorios de coche -->
-      <article class="provider buy-btn" data-product="Proveedor de Accesorios de coche" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Accesorios de coche">
+    <section class="providers-section" id="proveedores">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">CATÁLOGO</div>
+          <h2>Nuestros proveedores</h2>
         </div>
-        <div class="provider-info">
-          <h3>Proveedor de Accesorios de coche</h3>
-          <p>Accesorios y productos para automoción.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
+        <p>Elige la categoría que más te interese.</p>
+      </div>
+      <div class="provider-grid" id="providerGrid"></div>
+    </section>
 
-      <!-- 3. Motos eléctricas -->
-      <article class="provider buy-btn" data-product="Proveedor de Motos eléctricas" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Motos eléctricas">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Motos eléctricas</h3>
-          <p>Información de proveedores y modelos.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
+    <section class="how" id="como-funciona">
+      <div class="section-label">CÓMO FUNCIONA</div>
+      <h2>De la búsqueda al acceso<br>en pocos pasos.</h2>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Elige</h3><p>Selecciona un proveedor o el pack completo.</p></div>
+        <div class="step"><span>02</span><h3>Compra</h3><p>Paga con tarjeta o PayPal de forma segura.</p></div>
+        <div class="step"><span>03</span><h3>Recibe</h3><p>Recibirás el documento y acceso a tus compras.</p></div>
+      </div>
+    </section>
 
-      <!-- 4. Productos chinos -->
-      <article class="provider buy-btn" data-product="Proveedor de Productos chinos" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Productos chinos">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Productos chinos</h3>
-          <p>Selección de productos y proveedores.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
+    <section class="account-preview" id="mis-compras">
+      <div>
+        <div class="section-label">TU CUENTA</div>
+        <h2>Tus compras,<br>siempre a mano.</h2>
+        <p>Cuando tengamos conectado el sistema de pagos, aquí podrás acceder a tus documentos comprados, verlos y descargarlos.</p>
+      </div>
+      <div class="purchase-card">
+        <div class="purchase-head"><strong>Mis compras</strong><span>3 compras</span></div>
+        <div class="purchase-item"><span class="mini-art watch">⌚</span><div><strong>Proveedor de Relojes</strong><small>Completado</small></div><button>Descargar</button></div>
+        <div class="purchase-item"><span class="mini-art clothes">👕</span><div><strong>Proveedor de Ropa</strong><small>Completado</small></div><button>Descargar</button></div>
+        <div class="purchase-item"><span class="mini-art box">📦</span><div><strong>Pack Completo</strong><small>Completado</small></div><button>Descargar</button></div>
+      </div>
+    </section>
 
-      <!-- 5. Soportes móvil de moto -->
-      <article class="provider buy-btn" data-product="Proveedor de Soportes móvil de moto" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Soportes móvil de moto">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Soportes móvil de moto</h3>
-          <p>Soportes y accesorios para moto.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 6. Fábricas chinas -->
-      <article class="provider buy-btn" data-product="Proveedor de Fábricas chinas" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Fábricas chinas">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Fábricas chinas</h3>
-          <p>Información para localizar fabricantes.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 7. Polos -->
-      <article class="provider buy-btn" data-product="Proveedor de Polos" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Polos">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Polos</h3>
-          <p>Catálogos de polos y proveedores.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 8. Zapatos -->
-      <article class="provider buy-btn" data-product="Proveedor de Zapatos" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Zapatos">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Zapatos</h3>
-          <p>Calzado y proveedores especializados.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 9. Electrónica -->
-      <article class="provider buy-btn" data-product="Proveedor de Electrónica" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Electrónica">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Electrónica</h3>
-          <p>Productos y proveedores de electrónica.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 10. Juguetes -->
-      <article class="provider buy-btn" data-product="Proveedor de Juguetes" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Juguetes">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Juguetes</h3>
-          <p>Catálogos y proveedores de juguetes.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 11. Mandos PS -->
-      <article class="provider buy-btn" data-product="Proveedor de Mandos PS" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Mandos PS">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Mandos PS</h3>
-          <p>Proveedores de accesorios gaming.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 12. Tarjetas NFC -->
-      <article class="provider buy-btn" data-product="Proveedor de Tarjetas NFC" data-price="9,99">
-        <div class="provider-image">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Proveedor de Tarjetas NFC">
-        </div>
-        <div class="provider-info">
-          <h3>Proveedor de Tarjetas NFC</h3>
-          <p>Tarjetas NFC y productos relacionados.</p>
-          <div class="provider-bottom">
-            <span class="provider-price">9,99 €</span>
-            <span class="arrow">→</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
+    <section class="cta">
+      <div class="section-label">NEXOMARKET</div>
+      <h2>Encuentra tu próximo proveedor.</h2>
+      <a class="btn btn-light" href="#proveedores">Explorar catálogo <span>→</span></a>
+    </section>
   </main>
 
-  <div class="modal-overlay" id="buyModal">
-    <div class="modal">
-      <button class="modal-close" id="closeModal">&times;</button>
-      <h3 id="modalTitle">Producto</h3>
-      <p>Estás a punto de adquirir la información de este proveedor.</p>
-      <div class="modal-price" id="modalPrice">9,99 €</div>
-      <button class="modal-btn">Proceder al pago</button>
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">N</span><strong>NexoMarket</strong><p>Proveedores. Fabricantes. Oportunidades.</p></div>
+    <div class="footer-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Términos</a></div>
+    <p class="copyright">© 2026 NexoMarket. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="modal" id="buyModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Cerrar">×</button>
+      <div class="section-label">COMPRA</div>
+      <h2 id="modalTitle">Producto</h2>
+      <p>En esta primera versión el checkout es una demostración. Después conectaremos el pago real y el envío automático del documento.</p>
+      <label>Correo electrónico</label>
+      <input type="email" id="email" placeholder="tu@email.com">
+      <div class="modal-price"><span>Total</span><strong id="modalPrice">9,99 €</strong></div>
+      <button class="btn btn-light full" id="demoPay">Continuar al pago</button>
+      <small>Pago seguro · Tarjeta · PayPal</small>
     </div>
   </div>
 
-  <script src="script.js?v=77777"></script>
+  <script src="script.js"></script>
 </body>
 </html>
