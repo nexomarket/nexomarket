@@ -1,22 +1,24 @@
 const providers = [
-  ["Relojes","⌚","Catálogos, precios e información del proveedor."],
-  ["Accesorios de coche","🚗","Accesorios y productos para automoción."],
-  ["Motos eléctricas","🏍️","Información de proveedores y modelos."],
-  ["Productos chinos","📦","Selección de productos y proveedores."],
-  ["Soportes móvil de moto","📱","Soportes y accesorios para moto."],
-  ["Fábricas chinas","🏭","Información para localizar fabricantes."],
-  ["Polos","👕","Catálogos de polos y proveedores."],
-  ["Zapatos","👟","Calzado y proveedores especializados."],
-  ["Electrónica","🔌","Productos y proveedores de electrónica."],
-  ["Juguetes","🧸","Catálogos y proveedores de juguetes."],
-  ["Mandos PS","🎮","Proveedores de accesorios gaming."],
-  ["Tarjetas NFC","📲","Tarjetas NFC y productos relacionados."]
+  ["Relojes", "images/relojes.jpg", "Catálogos, precios e información del proveedor."],
+  ["Accesorios de coche", "images/coches.jpg", "Accesorios y productos para automoción."],
+  ["Motos eléctricas", "images/motos.jpg", "Información de proveedores y modelos."],
+  ["Productos chinos", "images/productos-chinos.jpg", "Selección de productos y proveedores."],
+  ["Soportes móvil de moto", "images/soportes-moto.jpg", "Soportes y accesorios para moto."],
+  ["Fábricas chinas", "images/fabricas.jpg", "Información para localizar fabricantes."],
+  ["Polos", "images/polos.jpg", "Catálogos de polos y proveedores."],
+  ["Zapatos", "images/zapatos.jpg", "Calzado y proveedores especializados."],
+  ["Electrónica", "images/electronica.jpg", "Productos y proveedores de electrónica."],
+  ["Juguetes", "images/juguetes.jpg", "Catálogos y proveedores de juguetes."],
+  ["Mandos PS", "images/mandos.jpg", "Proveedores de accesorios gaming."],
+  ["Tarjetas NFC", "images/nfc.jpg", "Tarjetas NFC y productos relacionados."]
 ];
 
 const grid = document.getElementById("providerGrid");
-grid.innerHTML = providers.map(([name, icon, desc]) => `
+grid.innerHTML = providers.map(([name, imgSrc, desc]) => `
   <article class="provider buy-btn" data-product="Proveedor de ${name}" data-price="9,99">
-    <div class="provider-image">${icon}</div>
+    <div class="provider-image">
+      <img src="${imgSrc}" alt="Proveedor de ${name}" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
     <div class="provider-info">
       <h3>Proveedor de ${name}</h3>
       <p>${desc}</p>
